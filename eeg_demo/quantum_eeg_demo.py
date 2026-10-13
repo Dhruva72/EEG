@@ -417,14 +417,6 @@ def run_demo(args: argparse.Namespace) -> None:
         f"({1.0 - np.mean(retained) / N_COMPONENTS:.1%} mean compression)"
     )
 
-    print("\n[4/4] What to explain during the presentation")
-    print("  - Q-bit angle theta stores a probability for retaining each TF cell.")
-    print("  - Each sampled mask is evaluated on source subjects only.")
-    print("  - The Pareto archive keeps accuracy, consistency, and compactness trade-offs.")
-    print("  - The held-out subject is touched only once, after source-only selection.")
-    print("  - The final paper would replace this fast proxy with the fixed deep decoder.")
-
-
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Run the quantum-inspired EEG paper core demo")
     parser.add_argument("--subjects", type=int, default=5, help="Synthetic subjects (default: 5)")
